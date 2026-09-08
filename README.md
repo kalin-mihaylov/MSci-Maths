@@ -30,4 +30,11 @@ and we need the derivative in order to integrate a path along it during the simu
 $F(x) = -\frac{dV}{dx}.$
 
 ### 3. Fitting the noise amplitude
-The inversion only determines the potential $V(x)$ up to a scale factor which determines the barrier height between different basins.
+The inversion only determines the potential $V(x)$ up to a scale factor which determines the barrier height between different basins. It turns out that by requiring the pdf be constant (this requirement is a must-have since the model is informed by the distributions), we inherently lock $\varepsilon = 1$, but we allow the fitting of $\varepsilon$ anyway, because as it allows us to recover the sharpness of data which was lost during smoothing operations!
+
+Measuring the recovery of peaks was attempted with multiple loss functions; $L^1, L^2, L^\infty, \log L^2$, as well as Wasserstein-1 distance, but the usual $L^2$ norm did the best job in recovering sharpness; for instance Wasserstein prioritised the tails of the distribution too heavily.
+
+Fitted splines are written out per $(w, Ca)$, with (x, density, potential, force, eps).
+
+### Kramers' time
+Basins (wells) and barriers are located from the spline, with associated basin boundaries which are geometrically motivated by the curvature of the spline. Kramers' estimates were mostly used as a reference point, and were compared against transitions times directly extracted from the data and/or GPU simulated data later in the notebooks.
