@@ -73,7 +73,7 @@ Aside from the notebooks not generally being fit for running.
 * The original GPU simulation function (ver1) still exists, despite being obsolete [left in for reproducibility]
 * $w = 2$ may be present in some results, but not others. It was excluded from much of the analysis due to it lacking a well-resolved distribution.
 * Some cells have commented out approaches, which were abandoned
-* When uploading the .ipynb files, some of the markdown/inline math used in the graph creation seems to have corrupted in an unusual way, and some symbols have been replaced with their LaTeX equivalents; e.g. “\infty” -> [LaTeX infinity symbol].
+* When uploading the .ipynb files, some of the markdown/inline math used in the graph creation may have been corrupted?
 
 ## Author
 Kalin Mihaylov - MSci Mathematics, UCL, 2026.
